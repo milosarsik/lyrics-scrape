@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import lyricsgenius
+from tkinter import *
 
 """ 
 LyricsGenius wrapper can be found here -> https://github.com/johnwmillr/LyricsGenius
@@ -13,7 +14,12 @@ module that searches web pages
 
 """
 
-# This is a quick example of the wrapper in use
+# creating the gui
+root = Tk()
+
+
+
+
 
 genius = lyricsgenius.Genius("W35CW_FDSRpwxHZ8oh27GGtG3dAEt66EAcNG6S0zjRS26YZkueVELFwbulTLiEWl")
 
