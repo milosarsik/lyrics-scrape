@@ -17,7 +17,10 @@ module that searches web pages
 
 genius = lyricsgenius.Genius("W35CW_FDSRpwxHZ8oh27GGtG3dAEt66EAcNG6S0zjRS26YZkueVELFwbulTLiEWl")
 
-song = genius.search_song("Without Me (Remix)", "Halsey")
+artistName = input("Artist: ")
+songName = input("Song name:")
+
+song = genius.search_song(songName, artistName)
 
 print(song.lyrics)
 
