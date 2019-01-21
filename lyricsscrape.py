@@ -14,21 +14,50 @@ module that searches web pages
 
 """
 
-# creating the gui
-root = Tk()
+# master
+master = Tk()
+master.geometry("300x300")
+master.title("Lyrics Scrape")
+
+# master.iconbitmap(r'C:\Users\milos\Documents\A-Z\G\GitHub\lyricsscrape\pythonlogo.png')
+
+# creating menu bar
+menuBar = Menu(master)
+master.config(menu=menuBar, bg="black")
+
+# this is the sub menu that shows up on the menu bar
+subMenu = Menu(menuBar)
+menuBar.add_cascade(label="Options", menu=subMenu)
+
+# adding separator
+subMenu.add_separator()
+
+# adding "Exit" to the subMenu "Options"
+subMenu.add_cascade(label="Exit", command=master.quit)
+
+Label(master, text="Artist Name: ", fg="yellow", bg="black").grid(row=0, sticky=N)          # sticky take N, E, S, W
+Label(master, text="Song Name: ", fg="yellow", bg="black").grid(row=1, sticky=N)
+
+artistNameEntry = Entry(master, bg="yellow")
+songeNameEntry = Entry(master, bg="yellow")
+
+artistNameEntry.grid(row=0, column=1)
+songeNameEntry.grid(row=1, column=1)
+
+searchButton = Button(text="Search", bg="yellow")
+searchButton.grid(row=3, column=1)
 
 
 
+# showing the gui
+master.mainloop()
 
 
-genius = lyricsgenius.Genius("W35CW_FDSRpwxHZ8oh27GGtG3dAEt66EAcNG6S0zjRS26YZkueVELFwbulTLiEWl")
+# genius = lyricsgenius.Genius("W35CW_FDSRpwxHZ8oh27GGtG3dAEt66EAcNG6S0zjRS26YZkueVELFwbulTLiEWl")
 
-artistName = input("Artist: ")
-songName = input("Song name:")
+#artistName = input("Artist: ")
+#songName = input("Song name:")
 
-song = genius.search_song(songName, artistName)
+#song = genius.search_song(songName, artistName)
 
-print(song.lyrics)
-
-
-
+#print(song.lyrics)
