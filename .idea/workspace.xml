@@ -9,14 +9,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.45178437">
+    <splitter split-orientation="horizontal" split-proportion="0.41326532">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/guitest.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1037">
-                  <caret line="61" column="47" lean-forward="true" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
+                <state relative-caret-position="428">
+                  <caret line="73" selection-start-line="73" selection-end-line="73" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -27,12 +27,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lyricsscrape.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="95">
-                  <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+                <state relative-caret-position="149">
+                  <caret line="29" column="39" lean-forward="true" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
                   <folding>
                     <element signature="e#0#29#0" expanded="true" />
                   </folding>
@@ -54,6 +54,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>entry1</find>
+      <find>get</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -69,15 +70,16 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="-9" />
     <option name="width" value="975" />
-    <option name="height" value="1088" />
+    <option name="height" value="1089" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -89,7 +91,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,12 +176,12 @@
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12954395" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09319233" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297587" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33378017" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3069705" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39937106" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -247,8 +248,8 @@
     <entry file="file://$PROJECT_DIR$/imageex.jpeg" />
     <entry file="file://$PROJECT_DIR$/guitest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="47" lean-forward="true" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
+        <state relative-caret-position="428">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -257,8 +258,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lyricsscrape.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        <state relative-caret-position="149">
+          <caret line="29" column="39" lean-forward="true" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>

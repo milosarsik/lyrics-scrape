@@ -74,7 +74,6 @@ clickbutton.bind("<Button-1>", printname)   # we can do either command, or we ca
 
 
 
-
 # mouse click events (tut 7)
 def leftClick(event):
     print("left")
