@@ -15,10 +15,14 @@ module that searches web pages
 """
 
 genius = lyricsgenius.Genius("W35CW_FDSRpwxHZ8oh27GGtG3dAEt66EAcNG6S0zjRS26YZkueVELFwbulTLiEWl")
-
 def getLyrics():
     song = genius.search_song(songNameEntry.get(), artistNameEntry.get())
-    print(song.lyrics)
+    print(song.lyrics)              # printing to the screen
+
+    Label(master, text=song.lyrics, fg="yellow", bg="black").grid(row=3, sticky=W)
+
+
+
 
 # master
 master = Tk()
@@ -48,15 +52,11 @@ songNameEntry = Entry(master, bg="yellow")
 artistNameEntry.grid(row=0, column=1)
 songNameEntry.grid(row=1, column=1)
 
-
-
 searchButton = Button(text="Search", bg="yellow", command=getLyrics)
 searchButton.grid(row=3, column=1)
 
 # showing the gui
 master.mainloop()
-
-
 
 #artistName = input("Artist: ")
 #songName = input("Song name:")
