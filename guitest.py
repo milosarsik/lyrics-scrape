@@ -43,10 +43,6 @@ two = Label(root, text="Two", bg="green", fg="black")
 three = Label(root, text="Three", bg="blue", fg="white")
 # three.pack(side=LEFT, fill=Y)
 
-
-
-
-
 # grid layout
 #Label(root, text="Name").grid(row=0, sticky=E)          # sticky take N, E, S, W
 #Label(root, text="Password").grid(row=1, sticky=E)
