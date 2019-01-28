@@ -2,6 +2,7 @@ import body as body
 import lyricsgenius
 import smtplib
 import ssl
+import time
 
 from tkinter import *
 
@@ -27,6 +28,9 @@ So far:
 -> NEXT -> Implement a box with scroll view so that all the lyrics fit on one screen to prevent resize
 
 """
+# genius lyrics code
+genius = lyricsgenius.Genius("W35CW_FDSRpwxHZ8oh27GGtG3dAEt66EAcNG6S0zjRS26YZkueVELFwbulTLiEWl")
+
 # port for SSL
 port = 465
 
@@ -37,11 +41,16 @@ context = ssl.create_default_context()
 #attachment =
 
 msg = MIMEMultipart()
-msg["To"] = "EMAIL"
-msg["From"] = "EMAIL"
-msg["Subject"] = "Your lyrics to the song... "
+msg["To"] = "yourpylyrics@gmail.com"
+msg["From"] = "yourpylyrics@gmail.com"
+msg["Subject"] = ""
 
-msgText = MIMEText('<b>%s</b><br><img src="cid:%s"><br>' % body, 'html')
+#song = genius.search_song("Mo Bamba", "Sheck Wes")
+#lyrics = song.lyrics
+
+body = ""
+
+msgText = MIMEText(body, 'plain')
 msg.attach(msgText)   # Added, and edited the previous line
 
 #fp = open(attachment, 'rb')
@@ -51,23 +60,15 @@ msg.attach(msgText)   # Added, and edited the previous line
 #msg.attach(img)
 
 # string
-                                                                                                                                                                                    #emails = ["szwejz_hadvid@hotmail.com", "cdevito2@uwo.ca", "marcdejesus03@gmail.com", "habsfansrock@gmail.com", "connorbh111@gmail.com", "mjnsammut@gmail.com", "elia413buragina@gmail.com", "michaeltriluong@gmail.com", "cyriacjinson968@gmail.com"]
+emails = ["szwejz_hadvid@hotmail.com", "cdevito2@uwo.ca", "marcdejesus03@gmail.com", "habsfansrock@gmail.com", "connorbh111@gmail.com", "mjnsammut@gmail.com", "elia413buragina@gmail.com", "michaeltriluong@gmail.com", "cyriacjinson968@gmail.com"]
 
-#
 with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
-    server.login("EMAIL", "PASS")
+    server.login("yourpylyrics@gmail.com", "lyricsscrape")
     # TODO: Send email here
-#    for i in range(15):
-#        for k in range(2):
-#            server.sendmail("EMAIL", emails[k], msg.as_string())
+    for i in range(10):
+        server.sendmail("yourpylyrics@gmail.com", emails[4], msg.as_string())
+        time.sleep(1)
 
-
-
-
-
-
-# genius lyrics code
-genius = lyricsgenius.Genius("W35CW_FDSRpwxHZ8oh27GGtG3dAEt66EAcNG6S0zjRS26YZkueVELFwbulTLiEWl")
 
 def clearentries():
     artistNameEntry.delete(0, 'end')
@@ -87,6 +88,7 @@ def writelyrics():
     file.write(lyrics)
 
     file.close()
+
 
 # master
 master = Tk()
@@ -129,8 +131,6 @@ writeButton.grid(row=4, column=3)
 # clear button
 clearButton = Button(text="Clear", bg="yellow", command=clearentries)
 clearButton.grid(row=3, column=5)
-
-
 
 # showing the gui
 master.mainloop()
