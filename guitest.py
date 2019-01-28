@@ -107,7 +107,28 @@ def rightClick(event):
 
 
 
+"""
+password = "mitchsam1"
+sender_email = "gaypornrecruitment@gmail.com"
 
+# create a secure SSL context
+context = ssl.create_default_context()
+
+#creating a message
+SUBJECT = "PORN! ANAL! AND BDSM RECRUITMENT"
+TEXT = "ANAL AND BONDAGE RECRUITMENT!!!!! GET SOME BIG BOYYYYY <3 <3 <3"
+
+message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
+
+#
+with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
+    server.login("gaypornrecruitment@gmail.com", password)
+    # TODO: Send email here
+    for i in range(2):
+        server.sendmail(sender_email, "milosarsic14@gmail.com", "")
+        
+
+"""
 
 
 
