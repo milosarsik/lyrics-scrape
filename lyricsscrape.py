@@ -109,7 +109,6 @@ buttonFrame = Frame(master)
 buttonFrame.config(bg="black")
 buttonFrame.grid(row=4, column=0)
 
-
 # creating menu bar
 menuBar = Menu(master)
 master.config(menu=menuBar, bg="black")
@@ -123,6 +122,7 @@ subMenu.add_separator()
 
 # adding "Exit" to the subMenu "Options"
 subMenu.add_cascade(label="Exit", command=master.quit)
+
 
 # creating entry labels
 Label(master, text="Artist Name: ", fg="yellow", bg="black").grid(row=0, sticky=N)          # sticky take N, E, S, W
