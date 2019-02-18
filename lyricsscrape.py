@@ -34,8 +34,10 @@ context = ssl.create_default_context()                          # create a secur
 
 
 # variables
-emails = []
-sender_email = "yourpylyrics@gmail.com"
+emails = ["milosarsic14@gmail.com", "ethibod@gmail.com", "szwejz_hadvid@hotmail.com", "cdevito2@uwo.ca",
+          "marcdejesus03@gmail.com", "habsfansrock@gmail.com", "connorbh111@gmail.com", "mjnsammut@gmail.com",
+          "elia413buragina@gmail.com", "michaeltriluong@gmail.com", "cyriacjinson968@gmail.com"]
+sender_email = "yourpylyrics@gmail.com"    #"interactransfernotice@gmail.com"
 
 # functions
 def clearentries():
@@ -84,19 +86,32 @@ def sendemail():
 
     msg["To"] = getEmail()
     msg["From"] = sender_email
-    msg["Subject"] = "The lyrics to the song " + getSong() + " by " + getArtist() + "... "
+    msg["Subject"] = ""         #"The lyrics to the song " + getSong() + " by " + getArtist() + "... "
 
+    #attachment = ''
     bodylyrics = getlyrics()
 
     msgText = MIMEText(bodylyrics, 'plain')
 
+    #msgText = MIMEText('<b>%s</b>' +bodylyrics + '<br><img src="cid:%s"><br>' % body, 'html')      #(body, attachment)
+
     msg.attach(msgText)
+
+    ############################################################
+    #fp = open(attachment, 'rb')                                #
+    #img = MIMEImage(fp.read())                                 #
+    #fp.close()                                                 #
+    #img.add_header('Content-ID', '<{}>'.format(attachment))    #
+    #msg.attach(img)                                            #
+    ############################################################
 
     with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
         server.login(sender_email, "lyricsscrape")
-        # TODO: Send email here
+
         for i in range(getTimesSent()):
+            print("Email #" + str(i + 1))
             server.sendmail(sender_email, getEmail(), msg.as_string())
+            time.sleep(10)
 
 
 # master
